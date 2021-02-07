@@ -14,9 +14,7 @@
 - MySql 
 
 ## 빌드 및 실행
-- 실행 dir : /
-  - 시작 : docker-compose up 
-  - 종료 : docker-compose down
+- TBD
 
 ## 아키텍처 이미지
 ![docker-compose-arch](https://user-images.githubusercontent.com/20297475/106726211-78322800-664d-11eb-8360-948130fca78b.jpg)
