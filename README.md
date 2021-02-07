@@ -9,7 +9,8 @@
   [x] 서비스 별 하나의 도커컴포즈 파일로 실행
 
 ## 개발환경
-- Nginx + VueJs
+- Nginx
+- NodeJs + VueJs
 - JDK8 + Jar
 - MySql 
 
