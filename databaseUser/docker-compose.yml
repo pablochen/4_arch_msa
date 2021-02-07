@@ -1,0 +1,21 @@
+version: "2" 
+services:
+  db: 
+    image: mysql:8.0.18
+    container_name: mysql-user
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_DATABASE: "user" 
+      MYSQL_USER: "tomcatuser"
+      MYSQL_PASSWORD: "password"
+    command: # 명령어 실행
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - ./init/:/docker-entrypoint-initdb.d/
+      - ./datadir/:/var/lib/mysql
+    ports:
+      - "3307:3306"
+    expose:
+      - "3307"
