@@ -13,6 +13,7 @@
 - NodeJs + VueJs
 - JDK8 + Jar
 - MySql 
+- Docker-compose
 
 ## 빌드 및 실행
 - TBD
