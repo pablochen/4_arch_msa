@@ -1,5 +1,6 @@
 package com.pablochen.backendUser.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.querydsl.core.annotations.QueryProjection;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,12 @@ public class DeptDto {
     @QueryProjection
     public DeptDto(int deptId, String deptCode, String deptName){
         this.deptId = deptId;
+        this.deptCode = deptCode;
+        this.deptName = deptName;
+    }
+
+    @JsonIgnore
+    public DeptDto(String deptCode, String deptName){
         this.deptCode = deptCode;
         this.deptName = deptName;
     }

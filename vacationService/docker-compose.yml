@@ -1,0 +1,30 @@
+version: "2" 
+
+services:
+  vacation-db: 
+    image: mysql:8.0.18
+    restart: always
+    environment:
+      MYSQL_DATABASE: vacation
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_HOST: '%'
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - ./databaseVacation/init/:/docker-entrypoint-initdb.d/
+      - ./databaseVacation/datadir/:/var/lib/mysql
+    ports:
+      - 3334:3306
+
+  vacation-back:
+    build: 
+      context: ./backendVacation/
+      dockerfile: back.Dockerfile
+    ports:
+      - 8081:8081
+    environment:
+      - spring.datasource.url=jdbc:mysql://vacation-db:3306/vacation?serverTimezone=UTC
+    depends_on:
+      - vacation-db
+
