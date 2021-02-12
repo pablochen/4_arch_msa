@@ -28,3 +28,13 @@ services:
     depends_on:
       - vacation-db
 
+  vacation-front:
+    build:
+      context: ./frontendVacation/
+      dockerfile: front.Dockerfile
+    ports:
+      - 3002:3002
+    depends_on:
+      - vacation-back
+
+
