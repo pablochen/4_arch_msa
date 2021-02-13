@@ -5,12 +5,9 @@
 - TO-BE : 
   - [x] 프론트엔드 분리
   - [x] 백엔드 분리 
-  - [x] 프론트엔드/백엔드/데이터베이스 도커 컴포즈 구축
-  - [ ] 서비스 별 포워딩 하기 위한 엔진엑스 웹서버 구축
-  - [ ] 서비스 별 하나의 도커컴포즈 파일로 실행
+  - [x] 서비스 별 하나의 도커컴포즈 파일로 실행(프론트+백+DB)
 
 ## 개발환경
-- Nginx
 - NodeJs + VueJs
 - JDK8 + Jar
 - MySql 
@@ -20,10 +17,14 @@
 - 유저 서비스 
   - dir : ./userService
   - cmd : docker-compose up
+  - 실행 : localhost:3001
 
 - 휴가 서비스
   - dir : ./vacationService
   - cmd : docker-compose up
+  - 실행 : localhost:3002
+
 
 ## 아키텍처 이미지
-![docker-compose-arch](https://user-images.githubusercontent.com/20297475/106726211-78322800-664d-11eb-8360-948130fca78b.jpg)
+![서비스_아키텍처_V0 2](https://user-images.githubusercontent.com/20297475/107861760-34c88c80-6e8b-11eb-853d-fbc98047faa4.jpg)
+
